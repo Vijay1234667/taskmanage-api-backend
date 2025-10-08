@@ -8,7 +8,7 @@ from routes.project_routes import project_bp
 from routes.task_routes import task_bp
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "http://localhost:5173"}}, supports_credentials=True, allow_headers=["Content-Type", "Authorization"],methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"])
+CORS(app, resources={r"/*": {"origins": "https://taskmanage-frontend-sage.vercel.app/"}}, supports_credentials=True, allow_headers=["Content-Type", "Authorization"],methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"])
 
 app.register_blueprint(auth_bp)
 app.register_blueprint(assignee_bp, url_prefix="/assignees", strict_slashes=False)
