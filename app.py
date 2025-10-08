@@ -1,5 +1,7 @@
 from flask import Flask
 from flask_cors import CORS
+import os
+
 from routes.auth_routes import auth_bp
 from routes.assignee_routes import assignee_bp
 from routes.project_routes import project_bp
