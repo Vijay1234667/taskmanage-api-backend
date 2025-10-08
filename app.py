@@ -17,5 +17,10 @@ app.register_blueprint(task_bp, url_prefix="/tasks", strict_slashes=False)
 def home():
     return "Mobavenue Task Management API is running."
 
+# if __name__ == "__main__":
+#     app.run(port=5000, debug=True)
+
+
 if __name__ == "__main__":
-    app.run(port=5000, debug=True)
+    port = int(os.environ.get("PORT", 5000))  # Render ka port variable use kare
+    app.run(host="0.0.0.0", port=port, debug=True)
